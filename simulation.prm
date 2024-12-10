@@ -1,0 +1,1534 @@
+!! Coarse-Grained Parameter File for the amino acids and peptides !!
+!! This is for use with "exclude 1-2" ONLY. !!
+!! Only neutral amino acids and neutral termini are represented. !!
+ATOMS
+MASS -1 C2E 29.07
+MASS -1 C2M 28.06
+MASS -1 C3E 43.10
+MASS -1 C3M 42.09
+MASS -1 CCR1 26.04 ! His
+MASS -1 NCR1 28.04 ! His
+MASS -1 NCR2 27.03 ! His
+MASS -1 NCC1 44.09 ! Ala N-terminus
+MASS -1 NCC2 43.08 ! Ala backbone
+MASS -1 C41 57.13 ! Leu
+MASS -1 CON2 58.07 ! Asn
+MASS -1 COO2 59.05 ! Asp
+MASS -1 RS1 28.06 ! Arginine side chain bead
+MASS -1 RS2 29.05 ! Arginine side chain bead
+MASS -1 RS3 43.06 ! Arginine side chain bead
+MASS -1 SC 47.10 ! Cys
+MASS -1 CON1 44.04 ! Glutamine side chain outer
+MASS -1 GNT 30.06 ! Glycine N-terminus
+MASS -1 GNC 29.05 ! Glycine backbone
+MASS -1 C2E2 28.06 ! Ile side chain inner
+MASS -1 CS 47.10 ! Methionine side chain outer
+MASS -1 BZF2 26.04
+MASS -1 BZF1 26.04
+MASS -1 TL2F 39.06 ! Phenylalanine toluene bead
+MASS -1 TL2W 39.06 ! Tryptophan toluene bead
+MASS -1 TL2Y 39.06 ! Tyrosine toluene bead
+MASS -1 PNC 27.03 ! Proline N-C bead
+MASS -1 PS 42.09 ! Proline 3-C side chain bead
+MASS -1 COH1 31.04 ! Serine side chain bead
+MASS -1 CCOH 45.07 ! Threonine side chain
+MASS -1 TOL4 52.08 ! Trp
+MASS -1 PL1 40.05 ! Trp
+MASS -1 COH3 42.04
+MASS -1 BZY 26.04
+MASS -1 C3E2 43.10
+MASS -1 CO 28.01 ! backbone carbonyl
+MASS -1 NC 28.04 ! backbone N-C
+MASS -1 NC2 30.06
+MASS -1 COO1 45.02 ! neutral C-terminus
+MASS -1 NCT 29.05 ! neutral N-terminus
+MASS -1 W1 36.04
+MASS -1 BZ 26.04
+MASS -1 PL2 26.04
+MASS -1 PL3 42.09 ! Added-Histidine:pyrrole bead- similar to PS bead from Proline
+MASS -1 TOL3 42.09 ! ADDED-Similar to PS from Proline
+MASS -1 TOL2 39.06 ! toluene: TRYPTOPHAN ANALOGUE
+BONDS
+!
+!V(bond) = Kb(r - r0)**2
+!
+!Kb: kcal/mole/A**2
+!r0: A
+!
+!bead types Kb r0
+! Alanine
+NCC1 CO 15 2.57
+CO NCC2 10 2.63
+NCC2 COO1 30 2.54
+! Asparagine
+CON2 NCT 8 3.00
+NC CON2 8 2.75
+! Aspartic Acid
+COO2 NCT 8 3.00
+NC COO2 55 2.71
+! Arginine
+NC RS1 10 2.30 ! RS1=C2M
+RS1 RS2 15 2.53
+RS2 RS3 50 2.4
+! Cysteine
+SC NCT 20 2.65
+NC SC 55 2.58
+! Glutamic Acid
+COO1 C2M 90.98 2.5
+C2M NCT 15 2.45 ! Same as Gln, Met
+NC C2M 34 2.30 ! Same as Gln, Met
+! Glutamine
+CON1 C2M 42 2.44
+C2M NCT 15 2.45 ! Same as Glu, Met
+NC C2M 34 2.30 ! Same as Glu, Met
+! Glycine
+GNT CO 50 2.50
+CO GNC 70 2.15
+GNC COO1 60 2.50
+! Histidine
+NCR2 NCR1 50 1.86
+NCR1 CCR1 30 2.45
+NCR2 CCR1 50 2.53
+CCR1 NCT 30 2.35
+NC CCR1 80 2.26
+!Histidine:pyridine
+BZ  BZ    365.88   2.24  !FROM KARTEEK PAPER
+BZ  NCR2    100   2.15 !FROM BOND DISTRIBUTION GRAPH
+!Histidine: pyrrole
+NCR1 PL3 90 1.67
+!Histidine: Toluene
+CCR1 BZ 85 2.62
+BZ TOL3 55 2.2
+CCR1 TOL3 55 2.92
+! Isoleucine
+C2E C2E2 44 2.41
+C2E2 NCT 40 2.50
+NC C2E2 30 2.28
+! 3,4,dimethylhexane: Isoleucine
+C2E2 C2E2 35 2.7
+! Leucine
+C41 NCT 12 3.18
+NC C41 10 2.95
+! 2,5,dimethylhexane:Leucine
+C41 C41 15 4.02
+! Lysine
+NC2 C3M 20 3.07
+C3M NCT 5 2.90
+NC C3M 10 2.52
+! Methionine
+CS C2M 32 2.5
+C2M NCT 15 2.45 ! Same as Glu, Gln
+NC C2M 34 2.30 ! Same as Glu, Gln
+! Phenylalanine
+BZF1 BZF2 62 2.23
+BZF1 TL2F 55 2.875
+BZF2 TL2F 53 2.45
+TL2F NCT 7 2.75
+NC TL2F 17 2.43
+! Proline
+CO PNC 40 2.04
+PNC PS 45 1.77
+! Serine
+COH1 NCT 30 2.5
+NC COH1 35 2.28
+! Threonine
+CCOH NCT 55 2.58
+NC CCOH 45 2.25
+! Tryptophan
+TOL4 PL1 60 3.11
+TOL4 TL2W 40 3.358
+TL2W PL1 60 2.195
+TL2W NCT 20 2.90
+NC TL2W 10 2.50
+! Pyrrole: Tryptophan
+PL1 PL2  90 1.69
+! Toluene:Tryptophan
+TOL4 TOL2  90 2.45
+! Tyrosine
+TL2Y BZY 50 2.45
+BZY COH3 50 2.45
+COH3 TL2Y 50 3.52
+TL2Y NCT 15 2.83
+NC TL2Y 15 2.42
+! Valine
+C3E2 NCT 40 2.44
+NC C3E2 35 2.26
+!2,3-dimethylbutane, Valine
+C3E2 C3E2  50 2.48
+! Backbone
+NCT CO 35 2.35
+CO NC 60 2.08
+NC COO1 70 2.48
+! Carbon-Carbon & Carbon-Peptide
+C3E C3M 37.695 3.561
+C3M C3M 37.695 3.561 ! from C3E-C3M
+C3M CO 38.537 2.914 ! from C2M-C3M
+C2E C2M 35.293 2.561
+C2M C2M 36.609 2.520
+!PNIPAM
+CG1 DBC 36.609 2.52
+CG1 GNT 36.609 2.52
+CG1 CG1 36.609 2.52
+CG1 CG2 50.014 2.42
+CG2 CG3 40.016 2.66
+
+DRO DGC 300 1.89
+DRO DBC 300 1.86
+
+DGC DGC 150 2.58
+DBC DBC 130 2.25
+DGC DBC 120 2.23
+
+DGC DBB 70 2.74
+DBC DBB 70 2.82
+
+DGC DMB 230 2.24
+DBC DMB 230 2.19
+
+DBC DSB 250 1.90
+
+DRO DBB 200 2.17
+DRO DMB 300 1.78
+DRO DSB 300 1.42
+
+!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!! linkage !!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!
+
+GSB GCL 100 2.0
+GSB BCL 100 2.0
+BSB GCL 100 2.0
+BSB BCL 100 2.0
+GSB BBL 100 2.5
+BSB BBL 100 2.5
+GSB MBL 100 2.0
+BSB MBL 100 2.0
+GSB SBL 100 2.0
+BSB SBL 100 2.0
+
+!!!!!! new bonds within the ring !!!!!!
+
+!!!! D !!!!
+
+DRO GSB 200 1.892107916 !same as DRO DGC (C1-O1)
+DRO BSB 200 1.867597759 !same as DRO DBC (C1-O1)
+
+DGC GSB 150 2.581501798 !same as DGC DGC (C1-C2)
+DBC GSB 110 2.230621052 !same as DBC DGC (C1-C2)
+DGC BSB 110 2.2306210529 !same as DGC DBC (C1-C2)
+DBC BSB 100 2.255545618 !same as DBC DBC (C1-C2)
+
+GCL DBC 110 2.230621052 !same as DGC DBC (C2/C3/C4-C2/C3/C4)
+GCL DGC 150 2.581501798 !same as DGC DGC (C2/C3/C4-C2/C3/C4)
+BCL DBC 100 2.255545618 !same as DBC DBC (C2/C3/C4-C2/C3/C4)
+BCL DGC 110 2.230621052 !same as DBC DGC (C2/C3/C4-C2/C3/C4)
+
+GCL DBB 100 2.736601241 !same as DGC DBB (C4-C5)
+BCL DBB 100 2.817140837 !same as DBC DBB (C4-C5)
+
+GCL DSB 200 1.952585622 !same as DGC DSB (C4-C5)
+BCL DSB 200 1.952585622 !same as DBC DSB (C4-C5)
+
+BBL DGC 100 2.736601241 !same as DGC DBB (C4-C5)
+BBL DBC 100 2.817140837 !same as DBC DBB (C4-C5)
+BBL DRO 180 2.176876686 !same as DBB DRO (C5-O1)
+
+SBL DGC 200 1.952585622 !same as DGC DSB (C4-C5)
+SBL DBC 200 1.952585622 !same as DBC DSB (C4-C5)
+SBL DRO 300 1.456118530 !same as DSB DRO (C5-O1)
+
+ANGLES
+!
+!V(angle) = Ktheta(Theta - Theta0)**2
+!
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!
+!bead types Ktheta Theta0
+! Alanine
+NCC1 CO NCC2 20 97
+CO NCC2 CO 5 91
+NCC2 CO NCC2 17 96
+CO NCC2 COO1 6 83
+! Asparagine
+CON2 NCT CO 6 68
+CO NC CON2 3 138
+CON2 NCT CG1 6 73
+CON2 NC COO1 50 114
+! Aspartic Acid
+COO2 NCT CO 5 75
+CO NC COO2 2 138
+COO2 NC COO1 27 114
+COO2 NCT CG1 6 73
+! Arginine
+CO NC RS1 10 140
+RS1 NC COO1 20 83
+NC RS1 RS2 10 153
+RS1 RS2 RS3 5 157
+! Cysteine
+SC NCT CO 10 71
+CO NC SC 30 166
+SC NC COO1 35 84
+SC NCT CG1 6 73
+! Glutamic Acid
+COO1 C2M NCT 25 114
+C2M NCT CO 10 73 ! Same in Gln, Met
+CO NC C2M 12 173 ! Same in Gln, Met
+NC C2M COO1 25 162
+C2M NC COO1 20 83 ! Same in Gln, Met
+! Glutamine
+CON1 C2M NCT 30 100
+C2M NCT CO 10 73 ! Same in Gln, Met
+CO NC C2M 12 173 ! Same in Gln, Met
+NC C2M CON1 30 160
+C2M NC COO1 20 83 ! Same in Gln, Met
+! Glycine
+GNT CO GNC 30 90
+NCT CO GNC 30 90
+CO GNT CG1 2 144
+CO GNC COO1 20 97
+! Histidine
+NCR2 CCR1 NCR1 40 44 ! This and next 3 must add to 180deg
+CCR1 NCR1 NCR2 25 70
+NCR1 NCR2 CCR1 25 66
+NCR1 CCR1 NCT 5 140
+CCR1 NCT CO 40 68
+CO NC CCR1 1 140
+COO1 NC CCR1 100 90
+NC CCR1 NCR2 7 124
+NCR2 CCR1 NCT 10 135
+NC CCR1 NCR1 7 120
+!HISTIDINE:PYRIDINE
+BZ BZ NCR2  8 59
+BZ NCR2 BZ 1 61
+!HISTIDINE:TOLUENE
+CCR1 BZ TOL3 70 73
+BZ TOL3 CCR1  25 60
+TOL3 CCR1 BZ 30 46.5
+! Isoleucine
+C2E C2E2 NCT 10 70
+C2E2 NCT CO 30 70
+CO NC C2E2 10 146
+NC C2E2 C2E 20 70
+C2E2 NC COO1 40 100
+! 3,4,dimethylhexane: Isoleucine
+C2E C2E2 C2E2 10 110
+! Leucine
+C41 NCT CG1 6 73
+C41 NCT CO 6 73
+CO NC C41 2 144
+CO NCT CG1 2 144
+C41 NC COO1 6 110
+! Lysine
+NC2 C3M NCT 3 140
+C3M NCT CO 3 75
+CO NC C3M 1 140
+NC C3M NC2 5 140
+C3M NC COO1 40 106
+! Methionine
+CS C2M NCT 2 120
+C2M NCT CO 10 73 ! Same in Gln, Glu
+CO NC C2M 12 173 ! Same in Gln, Glu
+NC C2M CS 2 130
+C2M NC COO1 20 83 ! Same in Gln, Glu
+! Phenylalanine
+BZF2 BZF1 TL2F 31 55.6
+BZF1 BZF2 TL2F 32 75.75
+BZF1 TL2F BZF2 33 48.65
+BZF2 TL2F NCT 7 110
+TL2F NCT CO 8 70
+CO NC TL2F 5 135
+COO1 NC TL2F 40 108
+NC TL2F BZF1 50 129.5
+NC TL2F BZF2 5 110
+BZF1 TL2F NCT 10 145
+! Proline
+NCT CO PNC 5 111
+CO PNC PS 8 144
+CO PNC CO 3 106
+PNC CO NC 10 103
+! Serine
+COH1 NCT CO 15 74
+CO NC COH1 30 173
+COH1 NC COO1 25 81
+COH1 NCT CG1 6 73
+! Threonine
+CCOH NCT CO 30 83
+CO NC CCOH 7 157
+CCOH NC COO1 50 93
+! Tryptophan
+TL2W PL1 TOL4 40 76.4 ! this and next three = 180
+PL1 TOL4 TL2W 40 39.4
+TOL4 TL2W PL1 40 64.2
+TOL4 TL2W NCT 10 140
+PL1 TL2W NCT 10 135
+TL2W NCT CO 20 75
+! Tyrosine
+TL2Y BZY COH3 25 92
+BZY COH3 TL2Y 25 44
+COH3 TL2Y BZY 25 44
+BZY TL2Y NCT 5 117
+COH3 TL2Y NCT 15 145
+TL2Y NCT CO 15 67
+TL2Y NC COO1 12 108
+CO NC TL2Y 2 123
+BZY TL2Y NC 2 110
+COH3 TL2Y NC 20 128
+! Valine
+C3E2 NCT CO 20 75
+CO NC C3E2 2 160
+C3E2 NC COO1 28 77
+! Carbon-Carbon & Carbon-Peptide
+C3E C3M C3M 3.4 145 ! based on C3E-C3M-C3E
+C3M C3M C3M 3.4 145 ! based on C3E-C3M-C3E
+C3M C3M CO 3.4 145 ! based on C3E-C3M-C3E
+C3M CO NCC2 1 140 ! from Lys CO-NC-C3M
+C2E C2M C2M 3.886 147.766
+C2M C2M C2M 3.460 144.226
+! Backbone
+NCT CO NC 7 90
+CO NC COO1 1 100
+NC CO NC 8 103 ! from valylvalylvaline
+GNC CO GNC 8 103 ! from valylvalylvaline
+CO NC CO 1 120 ! from valylvalylvaline
+CO GNC CO 1 120 ! from valylvalylvaline
+NC CO NCC2 20 97 ! from NCC1 CO NCC2 (alanine)
+!PNIPAM
+CG1 CG1 CG1 15.000 144.226
+CG1 CG1 DBC 15.000 144.226
+CG1 CG1 GNT 15.000 144.226
+CG1 CG1 CG2 15.000 100.0
+CG2 CG1 DBC 15.000 100.0
+CG2 CG1 GNT 15.000 100.0
+CG1 CG2 CG3 16.555 124.0
+
+CG1 DBC DBC 15.000 100.0
+CG1 DBC DRO 15.000 100.0
+
+DRO DGC DGC 130 110.79
+DRO DBC DGC 120 109.39 
+DRO DGC DBC 120 110.10
+DRO DBC DBC 120 109.78
+
+DGC DGC DBC 130 110.66
+DBC DGC DBC 120 108.70
+DGC DBC DBC 120 111.04
+DBC DBC DBC 110 110.61
+
+DGC DBB DRO 130 110.07
+DBC DBB DRO 130 109.97
+
+DGC DMB DRO 130 110.37
+DBC DMB DRO 130 110.64
+
+DBC DSB DRO 170 110.40
+
+DGC DRO DBB 170 114.60
+DBC DRO DBB 170 113.30
+
+DGC DRO DMB 200 114.54
+DBC DRO DMB 200 113.09
+
+DGC DRO DSB 200 114.08
+DBC DRO DSB 200 113.10
+
+DBC DBC DBB 150 110.89
+DBC DGC DBB 150 109.44
+
+DBC DGC DMB 130 105.43
+DBC DBC DMB 130 110.85
+
+DBC DBC DSB 100 110.61
+
+!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!! linkage !!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!! M1(D)C1-C*M2(D/L) !!!!
+
+DGC GSB BCL 100 133.28 !C1 (DGC ---> GSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, starting monomer
+DBC GSB BCL 100 133.28 !C1 (DGC ---> GSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, starting monomer
+DGC GSB GCL 100 130.93 !C1 (DGC ---> GSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, starting monomer
+DBC GSB GCL 100 130.93 !C1 (DGC ---> GSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, starting monomer
+
+DGC BSB BCL 100 123.99 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, starting monomer
+DBC BSB BCL 100 123.99 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, starting monomer
+DGC BSB GCL 100 139.35 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, starting monomer
+DBC BSB GCL 100 139.35 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, starting monomer
+
+!!!! M1(L)C1-C*M2(D/L) !!!!
+
+LGC GSB BCL 100 133.28 !C1 (LGC ---> GSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, starting monomer
+LBC GSB BCL 100 133.28 !C1 (LGC ---> GSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, starting monomer
+LGC GSB GCL 100 130.93 !C1 (LGC ---> GSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, starting monomer
+LBC GSB GCL 100 130.93 !C1 (LGC ---> GSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, starting monomer
+
+LGC BSB BCL 100 123.99 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, starting monomer
+LBC BSB BCL 100 123.99 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, starting monomer
+LGC BSB GCL 100 139.35 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, starting monomer
+LBC BSB GCL 100 139.35 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, starting monomer
+
+!!!! M1(D/L)C1-C*M2(D/L) !!!!
+
+GCL GSB BCL 100 133.28 !C2 (DGC ---> GCL) and C1 (DGC ---> GSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, middle
+BCL GSB BCL 100 133.28 !C2 (DGC ---> GCL) and C1 (DGC ---> GSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, middle
+GCL GSB GCL 100 130.93 !C2 (DGC ---> GCL) and C1 (DGC ---> GSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, middle
+
+GCL BSB BCL 100 123.99 !C2 (DGC ---> GCL) and C1 (DBC ---> BSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, middle
+BCL BSB BCL 100 123.99 !C2 (DGC ---> GCL) and C1 (DBC ---> BSB) and C2/C3/C4 (L/DBC ---> BCL), C2-C1-C*, middle
+GCL BSB GCL 100 139.35 !C2 (DGC ---> GCL) and C1 (DBC ---> BSB) and C2/C3/C4 (L/DGC ---> GCL), C2-C1-C*, middle
+
+!!!! M1(D)C1-C5*M2(D) !!!!
+
+DGC GSB BBL 100 133.28 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), C2-C1-C5*, starting monomer
+DBC GSB BBL 100 133.28 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), C2-C1-C5*, starting monomer
+DGC BSB BBL 100 133.28 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), C2-C1-C5*, starting monomer
+DBC BSB BBL 100 133.28 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), C2-C1-C5*, starting monomer
+
+DGC GSB SBL 100 133.28 !C1 (DGC ---> GSB) and C5 (DSB ---> SBL), C2-C1-C5*, starting monomer
+DBC GSB SBL 100 133.28 !C1 (DGC ---> GSB) and C5 (DSB ---> SBL), C2-C1-C5*, starting monomer
+DGC BSB SBL 100 133.28 !C1 (DBC ---> BSB) and C5 (DSB ---> SBL), C2-C1-C5*, starting monomer
+DBC BSB SBL 100 133.28 !C1 (DBC ---> BSB) and C5 (DSB ---> SBL), C2-C1-C5*, starting monomer
+
+!!!! M1(D)C1-C5*M2(L) !!!!
+
+DGC GSB MBL 100 133.28 !C1 (DGC ---> GSB) and C5 (LMB ---> MBL), C2-C1-C5*, starting monomer
+DBC GSB MBL 100 133.28 !C1 (DGC ---> GSB) and C5 (LMB ---> MBL), C2-C1-C5*, starting monomer
+DGC BSB MBL 100 133.28 !C1 (DBC ---> BSB) and C5 (LMB ---> MBL), C2-C1-C5*, starting monomer
+DBC BSB MBL 100 133.28 !C1 (DBC ---> BSB) and C5 (LMB ---> MBL), C2-C1-C5*, starting monomer
+
+!!!! M1(L)C1-C5*M2(D) !!!!
+
+LGC GSB BBL 100 133.28 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), C2-C1-C5*, starting monomer
+LBC GSB BBL 100 133.28 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), C2-C1-C5*, starting monomer
+LGC BSB BBL 100 133.28 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), C2-C1-C5*, starting monomer
+LBC BSB BBL 100 133.28 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), C2-C1-C5*, starting monomer
+
+LGC GSB SBL 100 133.28 !C1 (DGC ---> GSB) and C5 (DSB ---> SBL), C2-C1-C5*, starting monomer
+LBC GSB SBL 100 133.28 !C1 (DGC ---> GSB) and C5 (DSB ---> SBL), C2-C1-C5*, starting monomer
+LGC BSB SBL 100 133.28 !C1 (DBC ---> BSB) and C5 (DSB ---> SBL), C2-C1-C5*, starting monomer
+LBC BSB SBL 100 133.28 !C1 (DBC ---> BSB) and C5 (DSB ---> SBL), C2-C1-C5*, starting monomer
+
+!!!! M1(L)C1-C5*M2(L) !!!!
+
+LGC GSB MBL 100 133.28 !C1 (DGC ---> GSB) and C5 (LMB ---> MBL), C2-C1-C5*, starting monomer
+LBC GSB MBL 100 133.28 !C1 (DGC ---> GSB) and C5 (LMB ---> MBL), C2-C1-C5*, starting monomer
+LGC BSB MBL 100 133.28 !C1 (DBC ---> BSB) and C5 (LMB ---> MBL), C2-C1-C5*, starting monomer
+LBC BSB MBL 100 133.28 !C1 (DBC ---> BSB) and C5 (LMB ---> MBL), C2-C1-C5*, starting monomer
+
+!!!! M1(D/L)C1-C5*M2(D) !!!!
+
+GCL GSB BBL 100 133.28 !C2 (DGC ---> GCL) and C1 (DGC ---> GSB) and C5 (DBB ---> BBL), C2-C1-C5*, middle
+BCL GSB BBL 100 133.28 !C2 (DBC ---> BCL) and C1 (DGC ---> GSB) and C5 (DBB ---> BBL), C2-C1-C5*, middle
+GCL BSB BBL 100 133.28 !C2 (DGC ---> GCL) and C1 (DBC ---> BSB) and C5 (DBB ---> BBL), C2-C1-C5*, middle
+BCL BSB BBL 100 133.28 !C2 (DBC ---> BCL) and C1 (DBC ---> BSB) and C5 (DBB ---> BBL), C2-C1-C5*, middle
+
+GCL GSB SBL 100 133.28 !C2 (DGC ---> GCL) and C1 (DGC ---> GSB) and C5 (DSB ---> SBL), C2-C1-C5*, middle
+BCL GSB SBL 100 133.28 !C2 (DBC ---> BCL) and C1 (DGC ---> GSB) and C5 (DSB ---> SBL), C2-C1-C5*, middle
+GCL BSB SBL 100 133.28 !C2 (DGC ---> GCL) and C1 (DBC ---> BSB) and C5 (DSB ---> SBL), C2-C1-C5*, middle
+BCL BSB SBL 100 133.28 !C2 (DBC ---> BCL) and C1 (DBC ---> BSB) and C5 (DSB ---> SBL), C2-C1-C5*, middle
+
+!!!! M1(D/L)C1-C5*M2(L) !!!!
+
+GCL GSB MBL 100 133.28 !C2 (DGC ---> GCL) and C1 (DGC ---> GSB) and C5 (LMB ---> MBL), C2-C1-C5*, middle
+BCL GSB MBL 100 133.28 !C2 (DBC ---> BCL) and C1 (DGC ---> GSB) and C5 (LMB ---> MBL), C2-C1-C5*, middle
+GCL BSB MBL 100 133.28 !C2 (DGC ---> GCL) and C1 (DBC ---> BSB) and C5 (LMB ---> MBL), C2-C1-C5*, middle
+BCL BSB MBL 100 133.28 !C2 (DBC ---> BCL) and C1 (DBC ---> BSB) and C5 (LMB ---> MBL), C2-C1-C5*, middle
+
+!!!! M1(D)C1-C*M2(D/L) !!!!
+
+DRO GSB GCL 100 114.19 !C1 (DGC ---> GSB) and C2/C3/C4 (L/DGC ---> GCL), O1-C1-C*, starting monomer, middle
+DRO GSB BCL 100 106.57 !C1 (DGC ---> GSB) and C2/C3/C4 (L/DBC ---> BCL), O1-C1-C*, starting monomer, middle
+DRO BSB GCL 100 97.93 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DGC ---> GCL), O1-C1-C*, starting monomer, middle
+DRO BSB BCL 100 92.10 !C1 (DBC ---> BSB) and C2/C3/C4 (L/DBC ---> BCL), O1-C1-C*, starting monomer, middle
+
+!!!! M1(L)C1-C*M2(D/L) !!!!
+
+LRO GSB GCL 100 114.19 !C1 (LGC ---> GSB) and C2/C3/C4 (L/DGC ---> GCL), O1-C1-C*, starting monomer, middle
+LRO GSB BCL 100 106.57 !C1 (LGC ---> GSB) and C2/C3/C4 (L/DBC ---> BCL), O1-C1-C*, starting monomer, middle
+LRO BSB GCL 100 97.93 !C1 (LBC ---> BSB) and C2/C3/C4 (L/DGC ---> GCL), O1-C1-C*, starting monomer, middle
+LRO BSB BCL 100 92.10 !C1 (LBC ---> BSB) and C2/C3/C4 (L/DBC ---> BCL), O1-C1-C*, starting monomer, middle
+
+!!!! M1(D)C1-C5*M2(D) !!!!
+
+DRO GSB BBL 100 99.88 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), O1-C1-C5*
+DRO BSB BBL 100 87.54 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), O1-C1-C5*
+
+DRO GSB SBL 100 99.88 !!C1 (DGC ---> GSB) and C5 (DSB ---> SBL), O1-C1-C5*
+DRO BSB SBL 100 87.54 !C1 (DBC ---> BSB) and C5 (DSB ---> SBL), O1-C1-C5*
+
+!!!! M1(D)C1-C5*M2(L) !!!!
+
+DRO GSB MBL 100 99.88 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), O1-C1-C5*
+DRO BSB MBL 100 87.54 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), O1-C1-C5*
+
+!!!! M1(L)C1-C5*M2(D) !!!!
+
+LRO GSB BBL 100 99.88 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), O1-C1-C5*
+LRO BSB BBL 100 87.54 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), O1-C1-C5*
+
+LRO GSB SBL 100 99.88 !!C1 (DGC ---> GSB) and C5 (DSB ---> SBL), O1-C1-C5*
+LRO BSB SBL 100 87.54 !C1 (DBC ---> BSB) and C5 (DSB ---> SBL), O1-C1-C5*
+
+!!!! M1(L)C1-C5*M2(L) !!!!
+
+LRO GSB MBL 100 99.88 !!C1 (LGC ---> GSB) and C5 (LMB ---> MBL), O1-C1-C5*
+LRO BSB MBL 100 87.54 !C1 (LBC ---> BSB) and C5 (LMB ---> MBL), O1-C1-C5*
+
+!!!! M1(D/L)C1-C2*M2(D/L) !!!!
+
+GSB BCL GSB 100 127.75 !C1 (L/DGC ---> GSB) and C2* (L/DBC ---> BCL) and C1* (L/DGC ---> GSB), C1-C2*-C1*, starting monomer, middle
+GSB BCL BSB 100 108.57 !C1 (L/DGC ---> GSB) and C2* (L/DBC ---> BCL) and C1* (L/DGC ---> GSB), C1-C2*-C1*, starting monomer, middle
+GSB GCL GSB 100 122.33 !C1 (L/DGC ---> GSB) and C2* (L/DGC ---> GCL) and C1* (L/DGC ---> GSB), C1-C2*-C1*, starting monomer, middle
+GSB GCL BSB 100 112.10 !C1 (L/DGC ---> GSB) and C2* (L/DGC ---> GCL) and C1* (L/DGC ---> GSB), C1-C2*-C1*, starting monomer, middle
+
+BSB BCL GSB 100 122.33 !C1 (L/DBC ---> BSB) and C2* (L/DBC ---> BCL) and C1* (L/DGC ---> GSB), C1-C2*-C1*, starting monomer, middle
+BSB BCL BSB 100 112.68 !C1 (L/DBC ---> BSB) and C2* (L/DBC ---> BCL) and C1* (L/DGC ---> GSB), C1-C2*-C1*, starting monomer, middle
+BSB GCL GSB 100 127.75 !C1 (L/DBC ---> BSB) and C2* (L/DGC ---> GCL) and C1* (L/DGC ---> GSB), C1-C2*-C1*, starting monomer, middle
+BSB GCL BSB 100 119.92 !C1 (L/DBC ---> BSB) and C2* (L/DGC ---> GCL) and C1* (L/DGC ---> GSB), C1-C2*-C1*, starting monomer, middle
+
+!!!! M1(D/L)C1-C2/C3/C4*M2(D) !!!!
+
+GSB BCL DGC 100 127.75 !C1 (L/DGC ---> GSB) and C2/C3/C4* (L/DBC ---> BCL), C1-C*-C*
+GSB BCL DBC 100 108.57 !C1 (L/DGC ---> GSB) and C2/C3/C4* (L/DBC ---> BCL), C1-C*-C*
+GSB GCL DGC 100 122.33 !C1 (L/DGC ---> GSB) and C2/C3/C4* (L/DGC ---> GCL), C1-C*-C*
+GSB GCL DBC 100 112.10 !C1 (L/DGC ---> GSB) and C2/C3/C4* (L/DGC ---> GCL), C1-C*-C*
+
+BSB BCL DGC 100 127.75 !C1 (L/DBC ---> BSB) and C2/C3/C4* (L/DBC ---> BCL), C1-C*-C*
+BSB BCL DBC 100 108.57 !C1 (L/DBC ---> BSB) and C2/C3/C4* (L/DBC ---> BCL), C1-C*-C*
+BSB GCL DGC 100 122.33 !C1 (L/DBC ---> BSB) and C2/C3/C4* (L/DGC ---> GCL), C1-C*-C*
+BSB GCL DBC 100 112.10 !C1 (L/DBC ---> BSB) and C2/C3/C4* (L/DGC ---> GCL), C1-C*-C*
+
+!!!! M1(D/L)C1-C2/C3/C4*M2(L) !!!!
+
+GSB BCL LGC 100 127.75 !C1 (L/DGC ---> GSB) and C2/C3/C4* (L/DBC ---> BCL), C1-C*-C*
+GSB BCL LBC 100 108.57 !C1 (L/DGC ---> GSB) and C2/C3/C4* (L/DBC ---> BCL), C1-C*-C*
+GSB GCL LGC 100 122.33 !C1 (L/DGC ---> GSB) and C2/C3/C4* (L/DGC ---> GCL), C1-C*-C*
+GSB GCL LBC 100 112.10 !C1 (L/DGC ---> GSB) and C2/C3/C4* (L/DGC ---> GCL), C1-C*-C*
+
+BSB BCL LGC 100 127.75 !C1 (L/DBC ---> BSB) and C2/C3/C4* (L/DBC ---> BCL), C1-C*-C*
+BSB BCL LBC 100 108.57 !C1 (L/DBC ---> BSB) and C2/C3/C4* (L/DBC ---> BCL), C1-C*-C*
+BSB GCL LGC 100 122.33 !C1 (L/DBC ---> BSB) and C2/C3/C4* (L/DGC ---> GCL), C1-C*-C*
+BSB GCL LBC 100 112.10 !C1 (L/DBC ---> BSB) and C2/C3/C4* (L/DGC ---> GCL), C1-C*-C*
+
+!!!! M1(D/L)C1-C4*M2(D) !!!!
+
+GSB BCL DBB 100 122.94 !C1 (L/DGC ---> GSB) and C4* (DBC ---> BCL), C1-C4*-C5*
+GSB GCL DBB 100 130.84 !C1 (L/DGC ---> GSB) and C4* (DGC ---> GCL), C1-C4*-C5*
+BSB GCL DBB 100 122.94 !C1 (L/DBC ---> BSB) and C4* (DGC ---> GCL), C1-C4*-C5*
+BSB BCL DBB 100 130.84 !C1 (L/DBC ---> BSB) and C4* (DBC ---> BCL), C1-C4*-C5*
+
+GSB BCL DSB 100 122.94 !C1 (L/DGC ---> GSB) and C4* (DBC ---> BCL), C1-C4*-C5*
+GSB GCL DSB 100 130.84 !C1 (L/DGC ---> GSB) and C4* (DGC ---> GCL), C1-C4*-C5*
+BSB GCL DSB 100 122.94 !C1 (L/DBC ---> BSB) and C4* (DGC ---> GCL), C1-C4*-C5*
+BSB BCL DSB 100 130.84 !C1 (L/DBC ---> BSB) and C4* (DBC ---> BCL), C1-C4*-C5*
+
+!!!! M1(D/L)C1-C4*M2(L) !!!!
+
+GSB BCL LMB 100 122.94 !C1 (L/DGC ---> GSB) and C4* (LBC ---> BCL), C1-C4*-C5*
+GSB GCL LMB 100 130.84 !C1 (L/DGC ---> GSB) and C4* (LGC ---> GCL), C1-C4*-C5*
+BSB GCL LMB 100 122.94 !C1 (L/DGC ---> GSB) and C4* (LGC ---> GCL), C1-C4*-C5*
+BSB BCL LMB 100 130.84 !C1 (L/DGC ---> GSB) and C4* (LBC ---> BCL), C1-C4*-C5*
+
+!!!! M1(D/L)C1-C5*M2(D) !!!!
+
+GSB BBL DBC 100 128.72 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), C1-C5*-C4*
+GSB BBL DGC 100 156.94 !C1 (DGC ---> GSB) and C5 (DBB ---> BBL), C1-C5*-C4*
+BSB BBL DBC 100 128.72 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), C1-C5*-C4*
+BSB BBL DGC 100 156.94 !C1 (DBC ---> BSB) and C5 (DBB ---> BBL), C1-C5*-C4*
+
+GSB SBL DBC 100 128.72 !C1 (DGC ---> GSB) and C5 (DSB ---> SBL), C1-C5*-C4*
+GSB SBL DGC 100 156.94 !C1 (DGC ---> GSB) and C5 (DSB ---> SBL), C1-C5*-C4*
+BSB SBL DBC 100 128.72 !C1 (DBC ---> BSB) and C5 (DSB ---> SBL), C1-C5*-C4*
+BSB SBL DGC 100 156.94 !C1 (DBC ---> BSB) and C5 (DSB ---> SBL), C1-C5*-C4*
+
+!!!! M1(D/L)C1-C5*M2(L) !!!!
+
+GSB MBL LBC 100 128.72 !C1 (LGC ---> GSB) and C5 (LMB ---> MBL), C1-C5*-C4*
+GSB MBL LGC 100 156.94 !C1 (LGC ---> GSB) and C5 (LMB ---> MBL), C1-C5*-C4*
+BSB MBL LBC 100 128.72 !C1 (LBC ---> BSB) and C5 (LMB ---> MBL), C1-C5*-C4*
+BSB MBL LGC 100 156.94 !C1 (LBC ---> BSB) and C5 (LMB ---> MBL), C1-C5*-C4*
+
+!!!! M1(D/L)C1-C5*M2(D) !!!!
+
+GSB BBL DRO 100 88.88 !C1 (L/DGC ---> GSB) and C5 (DBB ---> BBL), C1-C5*-O1*
+BSB BBL DRO 100 130.71 !C1 (L/DBC ---> BSB) and C5 (DBB ---> BBL), C1-C5*-O1*
+
+GSB SBL DRO 100 88.88 !C1 (L/DGC ---> GSB) and C5 (DSB ---> SBL), C1-C5*-O1*
+BSB SBL DRO 100 130.71 !C1 (L/DBC ---> BSB) and C5 (DSB ---> SBL), C1-C5*-O1*
+
+!!!! M1(D/L)C1-C5*M2(L) !!!!
+
+GSB MBL LRO 100 88.88 !C1 (L/DGC ---> GSB) and C5 (LMB ---> MBL), C1-C5*-O1*
+BSB MBL LRO 100 130.71 !C1 (L/DBC ---> BSB) and C5 (LMB ---> MBL), C1-C5*-O1*
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!! new angles within the ring, same values as old angles !!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!! D !!!!
+
+!!!!!! C1 bead DGC !!!!!!
+
+GSB DGC DGC 100 110.6601844 ! same as DGC DGC DGC, C1-C2-C3, starting monomer
+GSB DGC DBC 130 110.6601844 ! same as DGC DGC DBC, C1-C2-C3, starting monomer
+GSB DBC DGC 120 111.0491852 ! same as DGC DBC DGC, C1-C2-C3, starting monomer
+GSB DBC DBC 120 111.0491852 ! same as DGC DBC DBC, C1-C2-C3, starting monomer
+
+GSB GCL DGC 100 110.6601844 ! same as DGC DGC DGC, C1-C2-C3, middle, C2 involved in linkage
+GSB GCL DBC 130 110.6601844 ! same as DGC DGC DBC, C1-C2-C3, middle, C2 involved in linkage
+GSB DGC BCL 130 110.6601844 ! same as DGC DGC DBC, C1-C2-C3, middle, C3 involved in linkage
+GSB DGC GCL 130 110.6601844 ! same as DGC DGC DGC, C1-C2-C3, middle, C3 involved in linkage
+GSB BCL DGC 120 111.0491852 ! same as DGC DBC DGC, C1-C2-C3, middle, C2 involved in linkage
+GSB BCL DBC 120 111.0491852 ! same as DGC DBC DBC, C1-C2-C3, middle, C2 involved in linkage
+GSB DBC BCL 120 111.0491852 ! same as DGC DBC DBC, C1-C2-C3, middle, C3 involved in linkage
+GSB DBC GCL 120 111.0491852 ! same as DGC DBC DGC, C1-C2-C3, middle, C3 involved in linkage
+
+DGC GCL DGC 100 110.6601844 ! same as DGC DGC DGC, C1-C2-C3, end monomer, C2 involved in linkage
+DGC GCL DBC 130 110.6601844 ! same as DGC DGC DBC, C1-C2-C3, end monomer, C2 involved in linkage
+DGC DGC GCL 100 110.6601844 ! same as DGC DGC DGC, C1-C2-C3, end monomer, C3 involved in linkage
+DGC DGC BCL 130 110.6601844 ! same as DGC DGC DBC, C1-C2-C3, end monomer, C3 involved in linkage
+
+DGC BCL DGC 120 111.0491852 ! same as DGC DBC DGC, C1-C2-C3, end monomer, C2 involved in linkage
+DGC BCL DBC 120 111.0491852 ! same as DGC DBC DBC, C1-C2-C3, end monomer, C2 involved in linkage
+DGC DBC BCL 120 111.0491852 ! same as DGC DBC DBC, C1-C2-C3, end monomer, C3 involved in linkage
+DGC DBC GCL 120 111.0491852 ! same as DGC DBC DGC, C1-C2-C3, end monomer, C3 involved in linkage
+
+!!!!!! C1 bead DBC !!!!!!
+
+BSB DGC DBC 120 108.7012567 ! same as DBC DGC DBC, C1-C2-C3, starting monomer
+BSB DBC DBC 110 110.6145603 ! same as DBC DBC DBC, C1-C2-C3, starting monomer
+BSB DGC DGC 130 110.6601844 ! same as DBC DGC DGC, C1-C2-C3, starting monomer
+BSB DBC DGC 120 111.0491852 ! same as DBC DBC DGC, C1-C2-C3, starting monomer
+
+BSB GCL DBC 120 108.7012567 ! same as DBC DGC DBC, C1-C2-C3, middle, C2 involved in linkage
+BSB GCL DGC 130 110.6601844 ! same as DBC DGC DGC, C1-C2-C3, middle, C2 involved in linkage
+BSB DBC BCL 110 110.6145603 ! same as DBC DBC DBC, C1-C2-C3, middle, C3 involved in linkage
+BSB DGC BCL 120 108.7012567 ! same as DBC DGC DBC, C1-C2-C3, middle, C3 involved in linkage
+BSB BCL DGC 120 111.0491852 ! same as DBC DBC DGC, C1-C2-C3, middle, C2 involved in linkage
+BSB BCL DBC 110 110.6145603 ! same as DBC DBC DBC, C1-C2-C3, middle, C2 involved in linkage
+BSB DBC GCL 110 110.6145603 ! same as DBC DBC DGC, C1-C2-C3, middle, C3 involved in linkage
+BSB DGC GCL 130 110.6601844 ! same as DBC DGC DGC, C1-C2-C3, middle, C3 involved in linkage
+
+DBC GCL DBC 120 108.7012567 ! same as DBC DGC DBC, C1-C2-C3, end monomer, C2 involved in linkage
+DBC GCL DGC 130 110.6601844 ! same as DBC DGC DGC, C1-C2-C3, end monomer, C2 involved in linkage
+DBC DBC BCL 110 110.6145603 ! same as DBC DBC DBC, C1-C2-C3, end monomer, C3 involved in linkage
+DBC DBC GCL 120 111.0491852 ! same as DBC DBC DGC, C1-C2-C3, end monomer, C3 involved in linkage
+
+DBC BCL DGC 120 111.0491852 ! same as DBC DBC DGC, C1-C2-C3, end monomer, C2 involved in linkage
+DBC BCL DBC 110 110.6145603 ! same as DBC DBC DBC, C1-C2-C3, end monomer, C2 involved in linkage
+DBC DGC GCL 130 110.6601844 ! same as DBC DGC DGC, C1-C2-C3, end monomer, C3 involved in linkage
+DBC DGC BCL 120 108.7012567 ! same as DBC DGC DBC, C1-C2-C3, end monomer, C3 involved in linkage
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!! C2 bead DGC !!!!!!
+
+GCL DBC DBC 120 111.0491852 ! same as DGC DBC DBC, C2-C3-C4, C2/C4 involved in linkage
+GCL DGC DGC 130 110.6601844 ! same as DGC DGC DGC, C2-C3-C4, C2/C4 involved in linkage
+GCL DBC DGC 120 111.0491852 ! same as DGC DBC DGC, C2-C3-C4, C2/C4 involved in linkage
+GCL DGC DBC 130 110.6601844 ! same as DGC DGC DBC, C2-C3-C4, C2/C4 involved in linkage
+
+!!!!!! C2 bead DBC !!!!!!
+
+BCL DBC DBC 110 110.6145603 ! same as DBC DBC DBC, C2-C3-C4, C2/C4 involved in linkage
+BCL DGC DGC 130 110.6601844 ! same as DBC DGC DGC, C2-C3-C4, C2/C4 involved in linkage
+BCL DBC DGC 120 111.0491852 ! same as DBC DBC DGC, C2-C3-C4, C2/C4 involved in linkage
+BCL DGC DBC 120 108.7012567 ! same as DBC DGC DBC, C2-C3-C4, C2/C4 involved in linkage
+
+!!!!!! C2 bead DGC !!!!!!
+
+DGC BCL DBC 120 111.0491852 ! same as DGC DBC DBC, C2-C3-C4, C3 involved in linkage
+DGC GCL DGC 130 110.6601844 ! same as DGC DGC DGC, C2-C3-C4, C3 involved in linkage
+DGC BCL DGC 120 111.0491852 ! same as DGC DBC DGC, C2-C3-C4, C3 involved in linkage
+DGC GCL DBC 130 110.6601844 ! same as DGC DGC DBC, C2-C3-C4, C3 involved in linkage
+
+!!!!!! C2 bead DBC !!!!!!
+
+DBC GCL DBC 120 108.7012567 ! same as DBC DGC DBC, C2-C3-C4, C3 involved in linkage
+DBC BCL DBC 110 110.6145603 ! same as DBC DBC DBC, C2-C3-C4, C3 involved in linkage
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+DBC DBC BBL 120 110.8925013 ! same as DBC DBC DBB, C3-C4-C5, C5 involved in linkage
+DBC DGC BBL 130 109.4430723 ! same as DBC DGC DBB, C3-C4-C5, C5 involved in linkage
+DGC DBC BBL 130 109.4430723 ! same as DGC DBC DBB, C3-C4-C5, C5 involved in linkage
+DGC DGC BBL 130 109.4430723 ! same as DGC DGC DBB, C3-C4-C5, C5 involved in linkage
+
+BCL DBC DBB 120 110.8925013 ! same as DBC DBC DBB, C3-C4-C5, C3 involved in linkage
+BCL DGC DBB 130 109.4430723 ! same as DBC DGC DBB, C3-C4-C5, C3 involved in linkage
+GCL DBC DBB 130 109.4430723 ! same as DGC DBC DBB, C3-C4-C5, C3 involved in linkage
+GCL DGC DBB 130 109.4430723 ! same as DGC DGC DBB, C3-C4-C5, C3 involved in linkage
+
+DBC BCL DBB 120 110.8925013 ! same as DBC DBC DBB, C3-C4-C5, C4 involved in linkage
+DBC GCL DBB 130 109.4430723 ! same as DBC DGC DBB, C3-C4-C5, C4 involved in linkage
+DGC BCL DBB 130 109.4430723 ! same as DGC DBC DBB, C3-C4-C5, C4 involved in linkage
+DGC GCL DBB 130 109.4430723 ! same as DGC DGC DBB, C3-C4-C5, C4 involved in linkage
+
+!!!!!!!! C5 is SB 
+
+DBC DGC SBL 100 110.6143145 ! same as DBC DGC DSB, C3-C4-C5, C5 involved in linkage
+DBC DBC SBL 100 110.6143145 ! same as DBC DBC DSB, C3-C4-C5, C5 involved in linkage
+DGC DGC SBL 100 110.6143145 ! same as DGC DGC DSB, C3-C4-C5, C5 involved in linkage
+DGC DBC SBL 100 110.6143145 ! same as DGC DBC DSB, C3-C4-C5, C5 involved in linkage
+
+BCL DGC DSB 100 110.6143145 ! same as DBC DGC DSB, C3-C4-C5, C3 involved in linkage
+BCL DBC DSB 100 110.6143145 ! same as DBC DBC DSB, C3-C4-C5, C3 involved in linkage
+GCL DGC DSB 100 110.6143145 ! same as DGC DGC DSB, C3-C4-C5, C3 involved in linkage
+GCL DBC DSB 100 110.6143145 ! same as DGC DBC DSB, C3-C4-C5, C3 involved in linkage
+
+DBC GCL DSB 100 110.6143145 ! same as DBC DGC DSB, C3-C4-C5, C4 involved in linkage
+DBC BCL DSB 100 110.6143145 ! same as DBC DBC DSB, C3-C4-C5, C4 involved in linkage
+DGC GCL DSB 100 110.6143145 ! same as DGC DGC DSB, C3-C4-C5, C4 involved in linkage
+DGC BCL DSB 100 110.6143145 ! same as DGC DBC DSB, C3-C4-C5, C4 involved in linkage
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+DGC BBL DRO 130 110.0720156 ! same as DGC DBB DRO, C4-C5-O1, C5 involved in linkage
+DBC BBL DRO 130 109.9724477 ! same as DBC DBB DRO, C4-C5-O1, C5 involved in linkage
+DGC SBL DRO 140 110.4097433 ! same as DGC DSB DRO, C4-C5-O1, C5 involved in linkage
+DBC SBL DRO 140 110.4097433 ! same as DBC DSB DRO, C4-C5-O1, C5 involved in linkage
+
+GCL DBB DRO 130 110.0720156 ! same as DGC DBB DRO, C4-C5-O1, C4 involved in linkage
+BCL DBB DRO 130 109.9724477 ! same as DBC DBB DRO, C4-C5-O1, C4 involved in linkage
+GCL DSB DRO 140 110.4097433 ! same as DGC DSB DRO, C4-C5-O1, C4 involved in linkage
+BCL DSB DRO 140 110.4097433 ! same as DBC DSB DRO, C4-C5-O1, C4 involved in linkage
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+GSB DRO DBB 130 114.6062397 ! same as DGC DRO DBB, C1-O1-C5, starting monomer
+BSB DRO DBB 130 113.3087938 ! same as DBC DRO DBB, C1-O1-C5, starting monomer
+
+DGC DRO BBL 130 114.6062397 ! same as DGC DRO DBB, C1-O1-C5, end monomer
+DBC DRO BBL 130 113.3087938 ! same as DBC DRO DBB, C1-O1-C5, end monomer
+
+BBL DRO GSB 130 114.6062397 ! same as DGC DRO DBB, C1-O1-C5, middle
+BBL DRO BSB 130 113.3087938 ! same as DGC DRO DBB, C1-O1-C5, middle
+
+GSB DRO DSB 200 114.0821812 ! same as DGC DRO DSB, C1-O1-C5, starting monomer
+BSB DRO DSB 200 113.100271  ! same as DBC DRO DSB, C1-O1-C5, starting monomer
+DGC DRO SBL 200 114.0821812 ! same as DGC DRO DSB, C1-O1-C5, end monomer
+DBC DRO SBL 200 113.100271  ! same as DBC DRO DSB, C1-O1-C5, end monomer
+SBL DRO GSB 200 114.0821812 ! same as DGC DRO DSB, C1-O1-C5, middle
+SBL DRO BSB 200 113.100271  ! same as DBC DRO DSB, C1-O1-C5, middle
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+DRO GSB DGC 130 110.7904582 ! same as DRO DGC DGC, O1-C1-C2, starting monomer
+DRO BSB DGC 120 109.3907436 ! same as DRO DBC DGC, O1-C1-C2, starting monomer
+DRO GSB DBC 120 110.1040708 ! same as DRO DGC DBC, O1-C1-C2, starting monomer
+DRO BSB DBC 120 109.7801739 ! same as DRO DBC DBC, O1-C1-C2, starting monomer
+
+DRO GSB GCL 130 110.7904582 ! same as DRO DGC DGC, O1-C1-C2, middle
+DRO BSB GCL 120 109.3907436 ! same as DRO DBC DGC, O1-C1-C2, middle
+DRO GSB BCL 120 110.1040708 ! same as DRO DGC DBC, O1-C1-C2, middle
+DRO BSB BCL 120 109.7801739 ! same as DRO DBC DBC, O1-C1-C2, middle
+
+DRO DGC GCL 130 110.7904582 ! same as DRO DGC DGC, O1-C1-C2, end monomer
+DRO DBC GCL 120 109.3907436 ! same as DRO DBC DGC, O1-C1-C2, end monomer
+DRO DGC BCL 120 110.1040708 ! same as DRO DGC DBC, O1-C1-C2, end monomer
+DRO DBC BCL 120 109.7801739 ! same as DRO DBC DBC, O1-C1-C2, end monomer
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+DIHEDRALS
+!
+!V(dihedral) = Kchi(1 + cos(n(chi) - delta))
+!
+!Kchi: kcal/mole
+!n: multiplicity
+!delta: degrees
+!
+! bead types Kchi n delta
+! Alanine
+NCC1 CO NCC2 CO 1.0 1 90
+CO NCC2 CO NCC2 0.6 1 0
+NCC2 CO NCC2 COO1 1.2 1 0
+! Asparagine
+CON2 NCT CO NC 0.3 2 0
+NCT CO NC CON2 1.45 1 100
+! Aspartic Acid
+COO2 NCT CO NC 0.3 2 0
+NCT CO NC COO2 1.7 1 102
+! Arginine
+ANT CO NC RS1 0.7 2 180
+CO NC RS1 RS2 0.7 2 0
+COO1 NC RS1 RS2 0.7 1 180
+NC RS1 RS2 RS3 0.7 2 0
+! Cysteine
+SC NCT CO NC 1.0 1 0
+NCT CO NC SC 0.6 2 0
+! Glutamic Acid
+COO1 C2M NCT CO 1.0 2 0
+C2M NCT CO NC 0.7 2 0
+NCT CO NC C2M 0.7 2 0
+CO NC C2M COO1 1.0 1 90
+COO1 C2M NC COO1 1.0 1 90
+! Glutamine
+CON1 C2M NCT CO 0.5 2 0
+C2M NCT CO NC 0.7 2 0
+NCT CO NC C2M 0.7 2 0
+CO NC C2M CON1 0.5 2 0
+CON1 C2M NC COO1 0.5 1 180
+! Glycine
+GNT CO GNC COO1 0.5 2 0
+! Histidine
+NCR1 CCR1 NCT CO 0.1 3 180
+NCR2 CCR1 NCT CO 0.1 1 180
+CCR1 NCT CO NC 0.1 2 81
+NCT CO NC CCR1 0.5 1 60
+CO NC CCR1 NCR2 0.5 1 180
+CO NC CCR1 NCR1 0.5 1 180
+COO1 NC CCR1 NCR2 0.8 1 0
+COO1 NC CCR1 NCR1 0.5 1 0
+! Isoleucine
+C2E C2E2 NCT CO 0.5 1 0
+C2E2 NCT CO NC 0.5 2 0
+NCT CO NC C2E2 0.5 1 90
+CO NC C2E2 C2E 0.5 1 270
+C2E C2E2 NC COO1 0.5 2 180
+! Leucine
+C41 NCT CO NC 0.5 1 0
+NCT CO NC C41 0.6 1 90
+! Lysine
+NC2 C3M NCT CO 0.2 2 76
+C3M NCT CO NC 0.7 1 90
+NCT CO NC C3M 2.0 1 120
+CO NC C3M NC2 0.2 3 180
+NC2 C3M NC COO1 0.1 3 0
+! Methionine
+CS C2M NCT CO 0.5 1 0
+C2M NCT CO NC 0.7 2 0
+NCT CO NC C2M 0.7 2 0
+CO NC C2M CS 0.5 1 0
+CS C2M NC COO1 0.4 1 60
+! Phenylalanine
+BZF1 TL2F NCT CO 0.3 2 0
+BZF2 TL2F NCT CO 0.4 2 0
+TL2F NCT CO NC 0.3 2 76
+NCT CO NC TL2F 1 1 90
+CO NC TL2F BZF1 0.5 1 270
+CO NC TL2F BZF2 0.3 1 120
+BZF1 TL2F NC COO1 0.3 1 270
+BZF2 TL2F NC COO1 0.5 2 180
+! Proline
+C3E2 NCT CO PNC 1.0 2 0
+NCT CO PNC PS 0.3 1 60
+NCT CO PNC CO 0.3 1 60
+CO PNC CO NC 0.5 1 180
+PS PNC CO NC 0.3 2 0
+PNC CO NC C41 0.5 1 60
+PNC CO NC COO1 1.7 1 0
+! Serine
+COH1 NCT CO NC 0.5 2 0
+NCT CO NC COH1 0.8 1 0
+! Threonine
+CCOH NCT CO NC 0.3 2 0
+NCT CO NC CCOH 1 1 90
+! Tryptophan
+TOL4 TL2W NCT CO 0.8 2 180
+PL1 TL2W NCT CO 0.7 2 0
+TL2W NCT CO NC 1.0 2 0
+NCT CO NC TL2W 1.0 1 180
+CO NC TL2W PL1 1.0 1 180
+CO NC TL2W TOL4 1.0 1 180
+COO1 NC TL2W PL1 1.2 1 0
+COO1 NC TL2W TOL4 1.3 1 0
+! Tyrosine
+COH3 TL2Y NCT CO 0.5 1 180
+BZY TL2Y NCT CO 0.5 1 180
+TL2Y NCT CO NC 0.5 1 0
+NCT CO NC TL2Y 0.5 2 180
+CO NC TL2Y COH3 0.7 1 180
+CO NC TL2Y BZY 0.5 1 180
+COH3 TL2Y NC COO1 1.0 1 0
+BZY TL2Y NC COO1 0.5 1 0
+! Valine
+C3E2 NCT CO NC 1.3 2 90
+NCT CO NC C3E2 2.0 1 43
+! Backbone
+NCT CO NC COO1 0.5 1 0
+NCT CO NC CO 2.0 1 0 ! from valylvalylvaline (t8)
+CO NC CO NC 0.1 2 0 ! from valylvalylvaline (t8)
+NC CO NC COO1 2.5 1 0 ! from valylvalylvaline (t8)
+!PNIPAM
+CG1 CG1 CG1 CG1 1.0 2 0.0
+CG1 CG1 CG1 CG2 1.0 2 60.0
+CG1 CG1 CG2 CG3 1.0 2 0.0
+CG2 CG1 CG1 CG2 1.0 2 0.0
+
+DBB DRO DBC DBC 1.6 1 59.52
+DBB DRO DBC DGC 1.6 1 62.07
+DBB DRO DGC DBC	1.6 1 53.09
+DBB DRO DGC DGC	1.6 1 51.62
+
+DBC DBB DRO DBC	1.6 1 -58.69
+DBC DBB DRO DGC	1.6 1 -52.82
+DGC DBB DRO DBC	1.6 1 -61.07
+DGC DBB DRO DGC	1.6 1 -56.36
+
+DBC DBC DBB DRO	1.6 1 51.98
+DBC DGC DBB DRO	1.6 1 56.59
+
+DBC DBC DBC DGC	1.6 1 52.22
+DBC DGC DBC DBC	1.6 1 54.92
+DGC DBC DBC DGC	1.6 1 52.37
+DGC DGC DBC DBC	1.6 1 52.81
+DBC DBC DBC DBC 1.6 1 51.60
+
+DBC DBC DGC DBB	1.6 1 -54.58
+DBC DBC DBC DBB	1.6 1 -52.00
+DGC DBC DBC DBB 1.6 1 -52.34
+
+DRO DBC DBC DBC	1.6 1 -53.89
+DRO DBC DGC DBC	1.6 1 -58.99
+DRO DGC DBC DBC	1.6 1 -51.00
+DRO DGC DGC DBC	1.6 1 -51.24
+
+DBC DBC DSB DRO	1.6 1 52.56
+
+DBC DBC DBC DSB	1.6 1 -51.83
+
+DBC DSB DRO DBC	1.6 1 -62.21
+DBC DSB DRO DGC	1.6 1 -58.33
+
+DSB DRO DBC DBC	1.6 1 58.27
+DSB DRO DGC DBC	1.6 1 51.86
+
+!!!! new dihedrals within ring !!!!
+
+BBL DRO DBC DBC 1.6 1 64.56229009 !C5-O1-C1-C2
+BBL DRO DBC DGC 1.6 1 62.25091807 !C5-O1-C1-C2
+BBL DRO DGC DBC	1.6 1 59.0684417 !C5-O1-C1-C2
+BBL DRO DGC DGC	1.6 1 59.20359959 !C5-O1-C1-C2
+BBL DRO BSB DBC 1.6 1 64.56229009 !C5-O1-C1-C2
+BBL DRO BSB DGC 1.6 1 62.25091807 !C5-O1-C1-C2
+BBL DRO GSB DBC	1.6 1 59.0684417 !C5-O1-C1-C2
+BBL DRO GSB DGC	1.6 1 59.20359959 !C5-O1-C1-C2
+DBB DRO BSB DBC 1.6 1 64.56229009 !C5-O1-C1-C2
+DBB DRO BSB DGC 1.6 1 62.25091807 !C5-O1-C1-C2
+DBB DRO GSB DBC	1.6 1 59.0684417 !C5-O1-C1-C2
+DBB DRO GSB DGC	1.6 1 59.20359959 !C5-O1-C1-C2
+DBB DRO BSB BCL 1.6 1 64.56229009 !C5-O1-C1-C2
+DBB DRO BSB GCL 1.6 1 62.25091807 !C5-O1-C1-C2
+DBB DRO GSB BCL	1.6 1 59.0684417 !C5-O1-C1-C2
+DBB DRO GSB GCL	1.6 1 59.20359959 !C5-O1-C1-C2
+DBB DRO DBC BCL 1.6 1 64.56229009 !C5-O1-C1-C2
+DBB DRO DBC GCL 1.6 1 62.25091807 !C5-O1-C1-C2
+DBB DRO DGC BCL	1.6 1 59.0684417 !C5-O1-C1-C2
+DBB DRO DGC GCL	1.6 1 59.20359959 !C5-O1-C1-C2
+
+DBC DBB DRO BSB	1.6 1 -62.5460657 !C4-C5-O1-C1
+DBC DBB DRO GSB	1.6 1 -59.93089342 !C4-C5-O1-C1
+DGC DBB DRO BSB	1.6 1 -61.35880684 !C4-C5-O1-C1
+DGC DBB DRO GSB	1.6 1 -58.99090037 !C4-C5-O1-C1
+DBC BBL DRO BSB	1.6 1 -62.5460657 !C4-C5-O1-C1
+DBC BBL DRO GSB	1.6 1 -59.93089342 !C4-C5-O1-C1
+DGC BBL DRO BSB	1.6 1 -61.35880684 !C4-C5-O1-C1
+DGC BBL DRO GSB	1.6 1 -58.99090037 !C4-C5-O1-C1
+DBC BBL DRO DBC	1.6 1 -62.5460657 !C4-C5-O1-C1
+DBC BBL DRO DGC	1.6 1 -59.93089342 !C4-C5-O1-C1
+DGC BBL DRO DBC	1.6 1 -61.35880684 !C4-C5-O1-C1
+DGC BBL DRO DGC	1.6 1 -58.99090037 !C4-C5-O1-C1
+BCL DBB DRO BSB	1.6 1 -62.5460657 !C4-C5-O1-C1
+BCL DBB DRO GSB	1.6 1 -59.93089342 !C4-C5-O1-C1
+GCL DBB DRO BSB	1.6 1 -61.35880684 !C4-C5-O1-C1
+GCL DBB DRO GSB	1.6 1 -58.99090037 !C4-C5-O1-C1
+BCL DBB DRO DBC	1.6 1 -62.5460657 !C4-C5-O1-C1
+BCL DBB DRO DGC	1.6 1 -59.93089342 !C4-C5-O1-C1
+GCL DBB DRO DBC	1.6 1 -61.35880684 !C4-C5-O1-C1
+GCL DBB DRO DGC	1.6 1 -58.99090037 !C4-C5-O1-C1
+
+DBC DBC BBL DRO	1.6 1 57.72824979 !C3-C4-C5-O1
+DBC DGC BBL DRO	1.6 1 53.80048732 !C3-C4-C5-O1
+DBC BCL DBB DRO	1.6 1 57.72824979 !C3-C4-C5-O1
+DBC GCL DBB DRO	1.6 1 53.80048732 !C3-C4-C5-O1
+BCL DBC DBB DRO	1.6 1 57.72824979 !C3-C4-C5-O1
+BCL DGC DBB DRO	1.6 1 53.80048732 !C3-C4-C5-O1
+
+BSB DBC DBC DGC	1.6 1 55.55708712 !C1-C2-C3-C4 b-mannose
+BSB BCL DBC DGC	1.6 1 55.55708712 !C1-C2-C3-C4 b-mannose
+BSB DBC BCL DGC	1.6 1 55.55708712 !C1-C2-C3-C4 b-mannose
+BSB DBC DBC GCL	1.6 1 55.55708712 !C1-C2-C3-C4 b-mannose
+DBC BCL DBC DGC	1.6 1 55.55708712 !C1-C2-C3-C4 b-mannose
+DBC DBC BCL DGC	1.6 1 55.55708712 !C1-C2-C3-C4 b-mannose
+DBC DBC DBC GCL	1.6 1 55.55708712 !C1-C2-C3-C4 b-mannose
+
+BSB DGC DBC DBC	1.6 1 52.29632571 !C1-C2-C3-C4 b-galactose
+BSB GCL DBC DBC	1.6 1 52.29632571 !C1-C2-C3-C4 b-galactose
+BSB DGC BCL DBC	1.6 1 52.29632571 !C1-C2-C3-C4 b-galactose
+BSB DGC DBC BCL	1.6 1 52.29632571 !C1-C2-C3-C4 b-galactose
+DBC GCL DBC DBC	1.6 1 52.29632571 !C1-C2-C3-C4 b-galactose
+DBC DGC BCL DBC	1.6 1 52.29632571 !C1-C2-C3-C4 b-galactose
+DBC DGC DBC BCL	1.6 1 52.29632571 !C1-C2-C3-C4 b-galactose
+
+BSB DGC DBC DGC	1.6 1 51.36857369 !C1-C2-C3-C4 b-glucose
+BSB GCL DBC DGC	1.6 1 51.36857369 !C1-C2-C3-C4 b-glucose
+BSB DGC BCL DGC	1.6 1 51.36857369 !C1-C2-C3-C4 b-glucose
+BSB DGC DBC GCL	1.6 1 51.36857369 !C1-C2-C3-C4 b-glucose
+DBC GCL DBC DGC	1.6 1 51.36857369 !C1-C2-C3-C4 b-glucose
+DBC DGC BCL DGC	1.6 1 51.36857369 !C1-C2-C3-C4 b-glucose
+DBC DGC DBC GCL	1.6 1 51.36857369 !C1-C2-C3-C4 b-glucose
+
+GSB DBC DBC DGC	1.6 1 53.79844206 !C1-C2-C3-C4 a-mannose
+GSB BCL DBC DGC	1.6 1 53.79844206 !C1-C2-C3-C4 a-mannose
+GSB DBC BCL DGC	1.6 1 53.79844206 !C1-C2-C3-C4 a-mannose
+GSB DBC DBC GCL	1.6 1 53.79844206 !C1-C2-C3-C4 a-mannose
+DGC BCL DBC DGC	1.6 1 53.79844206 !C1-C2-C3-C4 a-mannose
+DGC DBC BCL DGC	1.6 1 53.79844206 !C1-C2-C3-C4 a-mannose
+DGC DBC DBC GCL	1.6 1 53.79844206 !C1-C2-C3-C4 a-mannose
+
+GSB DGC DBC DBC	1.6 1 53.96372809 !C1-C2-C3-C4 a-galactose
+GSB GCL DBC DBC	1.6 1 53.96372809 !C1-C2-C3-C4 a-galactose
+GSB DGC BCL DBC	1.6 1 53.96372809 !C1-C2-C3-C4 a-galactose
+GSB DGC DBC BCL	1.6 1 53.96372809 !C1-C2-C3-C4 a-galactose
+DGC GCL DBC DBC	1.6 1 53.96372809 !C1-C2-C3-C4 a-galactose
+DGC DGC BCL DBC	1.6 1 53.96372809 !C1-C2-C3-C4 a-galactose
+DGC DGC DBC BCL	1.6 1 53.96372809 !C1-C2-C3-C4 a-galactose
+
+GSB DGC DBC DGC	1.6 1 53.13972571 !C1-C2-C3-C4 a-glucose
+GSB GCL DBC DGC	1.6 1 53.13972571 !C1-C2-C3-C4 a-glucose
+GSB DGC BCL DGC	1.6 1 53.13972571 !C1-C2-C3-C4 a-glucose
+GSB DGC DBC GCL	1.6 1 53.13972571 !C1-C2-C3-C4 a-glucose
+DGC GCL DBC DGC	1.6 1 53.13972571 !C1-C2-C3-C4 a-glucose
+DGC DGC BCL DGC	1.6 1 53.13972571 !C1-C2-C3-C4 a-glucose
+DGC DGC DBC GCL	1.6 1 53.13972571 !C1-C2-C3-C4 a-glucose
+
+BCL DBC DGC DBB	1.6 1 -52.32804927 !C2-C3-C4-C5 mannose
+DBC BCL DGC DBB	1.6 1 -52.32804927 !C2-C3-C4-C5 mannose
+DBC DBC GCL DBB	1.6 1 -52.32804927 !C2-C3-C4-C5 mannose
+DBC DBC DGC BBL	1.6 1 -52.32804927 !C2-C3-C4-C5 mannose
+
+GCL DBC DGC DBB	1.6 1 -50.79638793 !C2-C3-C4-C5 glucose
+DGC BCL DGC DBB	1.6 1 -50.79638793 !C2-C3-C4-C5 glucose
+DGC DBC GCL DBB	1.6 1 -50.79638793 !C2-C3-C4-C5 glucose
+DGC DBC DGC BBL	1.6 1 -50.79638793 !C2-C3-C4-C5 glucose
+
+GCL DBC DBC DBB	1.6 1 -54.23252594 !C2-C3-C4-C5 galactose
+DGC BCL DBC DBB	1.6 1 -54.23252594 !C2-C3-C4-C5 galactose
+DGC DBC BCL DBB	1.6 1 -54.23252594 !C2-C3-C4-C5 galactose
+DGC DBC DBC BBL	1.6 1 -54.23252594 !C2-C3-C4-C5 galactose
+
+DRO BSB DBC DBC	1.6 1 -61.32983414 !O1-C1-C2-C3 b-mannose
+DRO BSB BCL DBC	1.6 1 -61.32983414 !O1-C1-C2-C3 b-mannose
+DRO BSB DBC BCL	1.6 1 -61.32983414 !O1-C1-C2-C3 b-mannose
+DRO DBC BCL DBC	1.6 1 -61.32983414 !O1-C1-C2-C3 b-mannose
+DRO DBC DBC BCL	1.6 1 -61.32983414 !O1-C1-C2-C3 b-mannose
+
+DRO BSB DGC DBC	1.6 1 -56.05045289 !O1-C1-C2-C3 b-glucose and b-galactose
+DRO BSB GCL DBC	1.6 1 -56.05045289 !O1-C1-C2-C3 b-glucose and b-galactose
+DRO BSB DGC BCL	1.6 1 -56.05045289 !O1-C1-C2-C3 b-glucose and b-galactose
+DRO DBC GCL DBC	1.6 1 -56.05045289 !O1-C1-C2-C3 b-glucose and b-galactose
+DRO DBC DGC BCL	1.6 1 -56.05045289 !O1-C1-C2-C3 b-glucose and b-galactose
+
+DRO GSB DBC DBC	1.6 1 -56.32449933 !O1-C1-C2-C3 a-mannose
+DRO GSB BCL DBC	1.6 1 -56.32449933 !O1-C1-C2-C3 a-mannose
+DRO GSB DBC BCL	1.6 1 -56.32449933 !O1-C1-C2-C3 a-mannose
+DRO DGC BCL DBC	1.6 1 -56.32449933 !O1-C1-C2-C3 a-mannose
+DRO DGC DBC BCL	1.6 1 -56.32449933 !O1-C1-C2-C3 a-mannose
+
+DRO GSB DGC DBC	1.6 1 -55.59262569 !O1-C1-C2-C3 a-glucose
+DRO GSB GCL DBC	1.6 1 -55.59262569 !O1-C1-C2-C3 a-glucose
+DRO GSB DGC BCL	1.6 1 -55.59262569 !O1-C1-C2-C3 a-glucose
+DRO DGC GCL DBC	1.6 1 -55.59262569 !O1-C1-C2-C3 a-glucose
+DRO DGC DGC BCL	1.6 1 -55.59262569 !O1-C1-C2-C3 a-glucose
+
+DBC DGC SBL DRO	1.6 1 55.08563556 !C3-C4-C5-O1 xylose
+DBC GCL DSB DRO	1.6 1 55.08563556 !C3-C4-C5-O1 xylose
+BCL DGC DSB DRO	1.6 1 55.08563556 !C3-C4-C5-O1 xylose
+
+DGC DBC DGC SBL	1.6 1 -51.31619115 !C2-C3-C4-C5 xylose
+DGC DBC GCL DSB	1.6 1 -51.31619115 !C2-C3-C4-C5 xylose
+DGC BCL DGC DSB	1.6 1 -51.31619115 !C2-C3-C4-C5 xylose
+GCL DBC DGC DSB	1.6 1 -51.31619115 !C2-C3-C4-C5 xylose
+
+GCL DSB DRO DBC	1.6 1 -62.21952684 !C4-C5-O1-C1 b-xylose
+DGC SBL DRO DBC	1.6 1 -62.21952684 !C4-C5-O1-C1 b-xylose
+DGC DSB DRO BSB	1.6 1 -62.21952684 !C4-C5-O1-C1 b-xylose
+GCL DSB DRO BSB	1.6 1 -62.21952684 !C4-C5-O1-C1 b-xylose
+DGC SBL DRO BSB	1.6 1 -62.21952684 !C4-C5-O1-C1 b-xylose
+
+GCL DSB DRO DGC	1.6 1 -59.99030141 !C4-C5-O1-C1 a-xylose
+DGC SBL DRO DGC	1.6 1 -59.99030141 !C4-C5-O1-C1 a-xylose
+DGC DSB DRO GSB	1.6 1 -59.99030141 !C4-C5-O1-C1 a-xylose
+GCL DSB DRO GSB	1.6 1 -59.99030141 !C4-C5-O1-C1 a-xylose
+DGC SBL DRO GSB	1.6 1 -59.99030141 !C4-C5-O1-C1 a-xylose
+
+SBL DRO DBC DGC	1.6 1 62.52315501 !C5-O1-C1-C2 b-xylose
+DSB DRO DBC GCL	1.6 1 62.52315501 !C5-O1-C1-C2 b-xylose
+SBL DRO BSB DGC	1.6 1 62.52315501 !C5-O1-C1-C2 b-xylose
+DSB DRO BSB GCL	1.6 1 62.52315501 !C5-O1-C1-C2 b-xylose
+DSB DRO BSB DGC	1.6 1 62.52315501 !C5-O1-C1-C2 b-xylose
+
+SBL DRO DGC DGC	1.6 1 59.63535843 !C5-O1-C1-C2 a-xylose
+DSB DRO DGC GCL	1.6 1 59.63535843 !C5-O1-C1-C2 a-xylose
+SBL DRO GSB DGC	1.6 1 59.63535843 !C5-O1-C1-C2 a-xylose
+DSB DRO GSB GCL	1.6 1 59.63535843 !C5-O1-C1-C2 a-xylose
+DSB DRO GSB DGC	1.6 1 59.63535843 !C5-O1-C1-C2 a-xylose
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!! L !!!!!!!!
+
+LBC LBC LGC LGC	1.6 1 -52.04147855
+LGC LBC LBC LGC 1.6 1 -52.5302498
+LBC LGC LBC LBC 1.6 1 -54.7968903
+LBC LBC LBC LGC 1.6 1 -51.88046583
+
+LBC LGB LGC LMB	1.6 1 54.49263744
+LGC LBC LBC LMB	1.6 1 51.98295922
+
+LBC LMB LRO LBC	1.6 1 57.73531394
+LBC LMB LRO LGC	1.6 1 51.91530102
+LGC LMB LRO LBC	1.6 1 60.53692256
+LGC LMB LRO LGC	1.6 1 55.7140001
+
+LBC LBC LMB LRO	1.6 1 -51.26925519
+LBC LGC LMB LRO	1.6 1 -56.41459002
+
+LMB LRO LBC LBC	1.6 1 -58.0297528
+LMB LRO LBC LGC	1.6 1 -61.74344043
+LMB LRO LGC LBC	1.6 1 -52.13594585
+LMB LRO LGC LGC	1.6 1 -51.64370269
+
+LRO LBC LBC LBC	1.6 1 52.56612234
+LRO LBC LGC LBC	1.6 1 58.93931628
+LRO LGC LBC LBC	1.6 1 50.00056886
+LRO LGC LGC LBC	1.6 1 50.63279489
+
+!!!! new dihedrals within ring !!!!
+
+BSB LBC LGC LGC	1.6 1 -53.62106638 !C1-C2-C3-C4 a-fucose
+BSB BCL LGC LGC	1.6 1 -53.62106638 !C1-C2-C3-C4 a-fucose
+BSB LBC GCL LGC	1.6 1 -53.62106638 !C1-C2-C3-C4 a-fucose
+BSB LBC LGC GCL	1.6 1 -53.62106638 !C1-C2-C3-C4 a-fucose
+LBC BCL LGC LGC	1.6 1 -53.62106638 !C1-C2-C3-C4 a-fucose
+LBC LBC GCL LGC	1.6 1 -53.62106638 !C1-C2-C3-C4 a-fucose
+LBC LBC LGC GCL	1.6 1 -53.62106638 !C1-C2-C3-C4 a-fucose
+
+BSB LGC LGC LBC	1.6 1 -53.44886693 !C1-C2-C3-C4 a-rhamnose
+BSB GCL LGC LBC	1.6 1 -53.44886693 !C1-C2-C3-C4 a-rhamnose
+BSB LGC GCL LBC	1.6 1 -53.44886693 !C1-C2-C3-C4 a-rhamnose
+BSB LGC LGC BCL	1.6 1 -53.44886693 !C1-C2-C3-C4 a-rhamnose
+LBC GCL LGC LBC	1.6 1 -53.44886693 !C1-C2-C3-C4 a-rhamnose
+LBC LGC GCL LBC	1.6 1 -53.44886693 !C1-C2-C3-C4 a-rhamnose
+LBC LGC LGC BCL	1.6 1 -53.44886693 !C1-C2-C3-C4 a-rhamnose
+
+GSB LBC LGC LGC	1.6 1 -52.07140815 !C1-C2-C3-C4 b-fucose
+GSB BCL LGC LGC	1.6 1 -52.07140815 !C1-C2-C3-C4 b-fucose
+GSB LBC GCL LGC	1.6 1 -52.07140815 !C1-C2-C3-C4 b-fucose
+GSB LBC LGC GCL	1.6 1 -52.07140815 !C1-C2-C3-C4 b-fucose
+LGC BCL LGC LGC	1.6 1 -52.07140815 !C1-C2-C3-C4 b-fucose
+LGC LBC GCL LGC	1.6 1 -52.07140815 !C1-C2-C3-C4 b-fucose
+LGC LBC LGC GCL	1.6 1 -52.07140815 !C1-C2-C3-C4 b-fucose
+
+GSB LGC LGC LBC	1.6 1 -55.49998367 !C1-C2-C3-C4 b-rhamnose
+GSB GCL LGC LBC	1.6 1 -55.49998367 !C1-C2-C3-C4 b-rhamnose
+GSB LGC GCL LBC	1.6 1 -55.49998367 !C1-C2-C3-C4 b-rhamnose
+GSB LGC LGC BCL	1.6 1 -55.49998367 !C1-C2-C3-C4 b-rhamnose
+LGC GCL LGC LBC	1.6 1 -55.49998367 !C1-C2-C3-C4 b-rhamnose
+LGC LGC GCL LBC	1.6 1 -55.49998367 !C1-C2-C3-C4 b-rhamnose
+LGC LGC LGC BCL	1.6 1 -55.49998367 !C1-C2-C3-C4 b-rhamnose
+
+BCL LGC LGC LMB	1.6 1 53.94045592 !C2-C3-C4-C5 fucose
+LBC GCL LGC LMB	1.6 1 53.94045592 !C2-C3-C4-C5 fucose
+LBC LGC GCL LMB	1.6 1 53.94045592 !C2-C3-C4-C5 fucose
+LBC LGC LGC MBL	1.6 1 53.94045592 !C2-C3-C4-C5 fucose
+
+GCL LGC LBC LMB	1.6 1 51.68216643 !C2-C3-C4-C5 rhamnose
+LGC GCL LBC LMB	1.6 1 51.68216643 !C2-C3-C4-C5 rhamnose
+LGC LGC BCL LMB	1.6 1 51.68216643 !C2-C3-C4-C5 rhamnose
+LGC LGC LBC MBL	1.6 1 51.68216643 !C2-C3-C4-C5 rhamnose
+
+LBC LMB LRO BSB	1.6 1 57.55740627 !C4-C5-O1-C1 a-rhamnose
+BCL LMB LRO BSB	1.6 1 57.55740627 !C4-C5-O1-C1 a-rhamnose
+LBC MBL LRO BSB	1.6 1 57.55740627 !C4-C5-O1-C1 a-rhamnose
+BCL LMB LRO LBC	1.6 1 57.55740627 !C4-C5-O1-C1 a-rhamnose
+LBC MBL LRO LBC	1.6 1 57.55740627 !C4-C5-O1-C1 a-rhamnose
+
+LBC LMB LRO GSB	1.6 1 59.46492392 !C4-C5-O1-C1 b-rhamnose
+BCL LMB LRO GSB	1.6 1 59.46492392 !C4-C5-O1-C1 b-rhamnose
+LBC MBL LRO GSB	1.6 1 59.46492392 !C4-C5-O1-C1 b-rhamnose
+BCL LMB LRO LGC	1.6 1 59.46492392 !C4-C5-O1-C1 b-rhamnose
+LBC MBL LRO LGC	1.6 1 59.46492392 !C4-C5-O1-C1 b-rhamnose
+
+LGC LMB LRO BSB	1.6 1 59.81083218 !C4-C5-O1-C1 a-fucose
+GCL LMB LRO BSB	1.6 1 59.81083218 !C4-C5-O1-C1 a-fucose
+LGC MBL LRO BSB	1.6 1 59.81083218 !C4-C5-O1-C1 a-fucose
+GCL LMB LRO LBC	1.6 1 59.81083218 !C4-C5-O1-C1 a-fucose
+LGC MBL LRO LBC	1.6 1 59.81083218 !C4-C5-O1-C1 a-fucose
+
+LGC LMB LRO GSB	1.6 1 61.91270362 !C4-C5-O1-C1 b-fucose
+GCL LMB LRO GSB	1.6 1 61.91270362 !C4-C5-O1-C1 b-fucose
+LGC MBL LRO GSB	1.6 1 61.91270362 !C4-C5-O1-C1 b-fucose
+GCL LMB LRO LGC	1.6 1 61.91270362 !C4-C5-O1-C1 b-fucose
+LGC MBL LRO LGC	1.6 1 61.91270362 !C4-C5-O1-C1 b-fucose
+
+GCL LBC LMB LRO	1.6 1 -52.94571359 !C3-C4-C5-O1 rhamnose
+LGC BCL LMB LRO	1.6 1 -52.94571359 !C3-C4-C5-O1 rhamnose
+LGC LBC MBL LRO	1.6 1 -52.94571359 !C3-C4-C5-O1 rhamnose
+
+GCL LGC LMB LRO	1.6 1 -57.62840512 !C3-C4-C5-O1 fucose
+LGC GCL LMB LRO	1.6 1 -57.62840512 !C3-C4-C5-O1 fucose
+LGC LGC MBL LRO	1.6 1 -57.62840512 !C3-C4-C5-O1 fucose
+
+LMB LRO BSB LBC	1.6 1 -57.36863884 !C5-O1-C1-C2 a-fucose
+MBL LRO BSB LBC	1.6 1 -57.36863884 !C5-O1-C1-C2 a-fucose
+LMB LRO BSB BCL	1.6 1 -57.36863884 !C5-O1-C1-C2 a-fucose
+MBL LRO LBC LBC	1.6 1 -57.36863884 !C5-O1-C1-C2 a-fucose
+LMB LRO LBC BCL	1.6 1 -57.36863884 !C5-O1-C1-C2 a-fucose
+
+LMB LRO BSB LGC	1.6 1 -58.48420398 !C5-O1-C1-C2 a-rhamnose
+MBL LRO BSB LGC	1.6 1 -58.48420398 !C5-O1-C1-C2 a-rhamnose
+LMB LRO BSB GCL	1.6 1 -58.48420398 !C5-O1-C1-C2 a-rhamnose
+MBL LRO LBC LGC	1.6 1 -58.48420398 !C5-O1-C1-C2 a-rhamnose
+LMB LRO LBC GCL	1.6 1 -58.48420398 !C5-O1-C1-C2 a-rhamnose
+
+LMB LRO GSB LBC	1.6 1 -59.32889579 !C5-O1-C1-C2 b-fucose
+MBL LRO GSB LBC	1.6 1 -59.32889579 !C5-O1-C1-C2 b-fucose
+LMB LRO GSB BCL	1.6 1 -59.32889579 !C5-O1-C1-C2 b-fucose
+MBL LRO LGC LBC	1.6 1 -59.32889579 !C5-O1-C1-C2 b-fucose
+LMB LRO LGC BCL	1.6 1 -59.32889579 !C5-O1-C1-C2 b-fucose
+
+LMB LRO GSB LGC	1.6 1 -64.30738442 !C5-O1-C1-C2 b-rhamnose
+MBL LRO GSB LGC	1.6 1 -64.30738442 !C5-O1-C1-C2 b-rhamnose
+LMB LRO GSB GCL	1.6 1 -64.30738442 !C5-O1-C1-C2 b-rhamnose
+MBL LRO LGC LGC	1.6 1 -64.30738442 !C5-O1-C1-C2 b-rhamnose
+LMB LRO LGC GCL	1.6 1 -64.30738442 !C5-O1-C1-C2 b-rhamnose
+
+LRO BSB LBC LGC	1.6 1 54.18718026 !O1-C1-C2-C3 a-fucose
+LRO BSB BCL LGC	1.6 1 54.18718026 !O1-C1-C2-C3 a-fucose
+LRO BSB LBC GCL	1.6 1 54.18718026 !O1-C1-C2-C3 a-fucose
+LRO LBC BCL LGC	1.6 1 54.18718026 !O1-C1-C2-C3 a-fucose
+LRO LBC LBC GCL	1.6 1 54.18718026 !O1-C1-C2-C3 a-fucose
+
+LRO BSB LGC LGC	1.6 1 56.04606886 !O1-C1-C2-C3 a-rhamnose
+LRO BSB GCL LGC	1.6 1 56.04606886 !O1-C1-C2-C3 a-rhamnose
+LRO BSB LGC GCL	1.6 1 56.04606886 !O1-C1-C2-C3 a-rhamnose
+LRO LBC GCL LGC	1.6 1 56.04606886 !O1-C1-C2-C3 a-rhamnose
+LRO LBC LGC GCL	1.6 1 56.04606886 !O1-C1-C2-C3 a-rhamnose
+
+LRO GSB LBC LGC	1.6 1 53.8988533 !O1-C1-C2-C3 a-fucose
+LRO GSB BCL LGC	1.6 1 53.8988533 !O1-C1-C2-C3 a-fucose
+LRO GSB LBC GCL	1.6 1 53.8988533 !O1-C1-C2-C3 a-fucose
+LRO LGC BCL LGC	1.6 1 53.8988533 !O1-C1-C2-C3 a-fucose
+LRO LGC LBC GCL	1.6 1 53.8988533 !O1-C1-C2-C3 a-fucose
+
+LRO GSB LGC LGC	1.6 1 61.50277616 !O1-C1-C2-C3 b-rhamnose
+LRO GSB GCL LGC	1.6 1 61.50277616 !O1-C1-C2-C3 b-rhamnose
+LRO GSB LGC GCL	1.6 1 61.50277616 !O1-C1-C2-C3 b-rhamnose
+LRO LGC GCL LGC	1.6 1 61.50277616 !O1-C1-C2-C3 b-rhamnose
+LRO LGC LGC GCL	1.6 1 61.50277616 !O1-C1-C2-C3 b-rhamnose
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!! linkage !!!!!!!!!!!!
+
+!!!!!!!! AA values that need to be optimized !!!!!!!!!!
+
+DBB DRO GSB BCL 1.6 1 -91.49
+DBC DGC GSB BCL 1.6 1 80.81
+
+GSB GCL DBB DRO 1.6 1 -156.24
+GSB GCL DBC DGC 1.6 1 152.49
+DBB DRO GSB GCL 1.6 1 -94.52
+DBC DGC GSB GCL 1.6 1 92.41
+
+GSB BBL DRO GSB 1.6 1 128.62
+GSB BBL DRO DGC 1.6 1 128.62
+DBB DRO GSB BBL 1.6 1 -112.23
+BBL DRO GSB BBL 1.6 1 -112.23
+DBC DGC GSB BBL 1.6 1 112.86
+BCL DGC GSB BBL 1.6 1 112.86
+
+DBC DGC BSB BBL 1.6 1 -154.56
+DRO BSB BBL DBC 1.6 1 -48.41
+
+DGC BSB GCL DBC 1.6 1 93.63
+BSB GCL DBB DRO 1.6 1 -151.13
+BSB GCL DBC DGC 1.6 1 154.03
+DBB DRO BSB GCL 1.6 1 -146.68
+DRO BSB GCL DBC 1.6 1 -34.75
+
+
+X X X X 0 0 0 ! sets all others not listed to 0
+! So all dihedrals like LS1-NC-CO-NC and C3M-C3M-C3M are set to 0!
+
+NONBONDED
+!
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6]
+!
+!epsilon: kcal/mole, Eps,i,j = sqrt(eps,i * eps,j)
+!Rmin/2: A, Rmin,i,j = Rmin/2,i + Rmin/2,j
+!
+!bead ignored epsilon Rmin/2
+CCR1 0.000000 -0.3058 2.4725
+NCR1 0.000000 -0.7506 1.8759
+NCR2 0.000000 -0.4417 2.1546
+NCT 0.000000 -0.6000 2.1650 ! same as NC2 (Lys bead)
+CO 0.000000 -0.6690 2.4361
+NC 0.000000 -0.6765 2.1436
+COO1 0.000000 -1.2516 2.2088 ! from Yaxin's propionic acid bead
+NCC1 0.000000 -0.8699 2.4014
+NCC2 0.000000 -0.8699 2.4014
+C41 0.000000 -0.7120 2.8515
+NC2 0.000000 -0.6000 2.1650
+CON2 0.000000 -1.1332 2.4343
+COO2 0.000000 -0.8714 2.3950
+RS1 0.000000 -0.3420 2.4343 ! Arg side chain; same as C2M
+RS2 0.000000 -0.6765 2.1436 ! Arg side chain; same as NC bead
+RS3 0.000000 -1.0881 2.2635 ! Arg side chain
+SC 0.000000 -0.8638 2.3606
+CON1 0.000000 -1.0876 2.0609
+GNT 0.000000 -0.6000 2.1650 ! same as NCT
+GNC 0.000000 -0.6765 2.1436 ! same as NC
+C2E2 0.000000 -0.3544 2.4146
+CS 0.000000 -0.7001 2.3969
+BZF1 0.000000 -0.3205 2.2332 ! from Karteek's benzene model
+BZF2 0.000000 -0.3205 2.2332 ! from Karteek's benzene model
+TOL2 0.000000 -0.5003 2.5318
+TL2F 0.000000 -0.5003 2.5318
+TL2W 0.000000 -0.5003 2.5318
+TL2Y 0.000000 -0.5003 2.5318
+PNC 0.000000 -0.6000 2.1650 ! Same as NC2
+PS 0.000000 -0.5545 2.6010 ! Same as C3M
+COH1 0.000000 -0.7152 2.0909
+CCOH 0.000000 -0.7999 2.3741
+TOL4 0.000000 -0.5839 2.6920
+PL1 0.000000 -1.0688 1.8769
+COH3 0.000000 -0.7359 2.0730
+BZY 0.000000 -0.3205 2.2332 ! from Karteek's benzene model
+C3E2 0.000000 -0.4599 2.7807
+C2E 0.000000 -0.3710 2.4343 ! Yaxin's parameters
+C2M 0.000000 -0.3420 2.4343 ! Yaxin's parameters
+C3M 0.000000 -0.5545 2.6010 ! Yaxin's parameters
+C3E 0.000000 -0.5927 2.6010 ! Yaxin's parameters
+BZ 0.000000 -0.3205 2.2332
+PL2 0.000000 -0.3205 2.2332
+PL3 0.000000 -0.5545 2.6010 ! added-Histidine:pyrrole- same as PS bead from Proline
+TOL3 0.000000 -0.5545 2.6010 ! added-similar to PS from Proline
+
+W1 0.000000 -1.1425 2.1170
+CG1 0.00000 -0.3420 2.4343
+CG2 0.00000 -1.071439 2.415
+CG3 0.00000 -0.426573 2.687
+
+DGC  0.0    -0.614060    1.9980
+DBC  0.0    -0.614060    1.9980
+DBB  0.0    -1.176000    2.2740
+DMB  0.0    -0.381000    2.4840  
+DSB  0.0    -0.287385    2.0266
+DRO  0.0    -0.345554    1.9950  
+LGC  0.0    -0.614060    1.9980 
+LBC  0.0    -0.614060    1.9980
+LBB  0.0    -1.160000    2.2740
+LMB  0.0    -0.381000    2.4840
+LSB  0.0    -0.287385    2.0266
+LRO  0.0    -0.345554    1.9950
+GCL  0.0    -0.614060    1.9980
+BCL  0.0    -0.614060    1.9980
+BBL  0.0    -1.176000    2.2740
+SBL  0.0    -0.287385    2.0266
+MBL  0.0    -0.381000    2.4840
+GSB  0.0    -0.287385    2.0266
+BSB  0.0    -0.287385    2.0266
+W1   0.0    -1.142500    2.1170 
+
+
+NBFIX
+! Bead Emin Rmin
+! Types (kcal/mol) (Å)
+C2E W1 -0.5130 4.2359
+C2M W1 -0.4400 4.2359
+C3E W1 -0.6202 4.5000
+C3M W1 -0.5434 4.5000
+
+COO1 W1 -1.14 4.3258
+CO   W1 -0.77 3.92875
+NC   W1 -0.6 3.8165 
+NCT  W1 -0.75 4.49
+
+!Alanine 
+NCC1 W1 -1.036062 4.5184
+NCC2 W1 -0.66719 4.5184
+!Asparagine
+CON2 W1 -1.35 4.5513
+!Asparatic acid
+COO2 W1 -1.224566 4.512
+!Glutamine
+CON1 W1 -1.34 4.1779
+!Histidin
+NCR1 W1 -0.961963  3.9929
+NCR2 W1 -0.828  4.2716
+CCR1 W1 -0.52  4.5895
+!Isoleucine
+C2E2 W1 -0.51 4.5316
+!Leucine
+C41  W1  -0.732131  4.9685
+!Phenylalanine
+BZF1 W1  0.5  4.3502
+BZF2 W1  0.5  4.3502
+TL2F W1  0.64  4.6488
+!Serine
+COH1 W1 -1.12 4.2079
+!Threonine
+CCOH W1 -1.008149 4.4911
+!Tryptophan 
+TOL4 W1  -0.76  4.809
+PL1  W1  -0.9  3.9939
+TL2W W1  -0.62  4.6488
+!Tyrosine
+COH3 W1  -0.911439  3.9929           
+BZY  W1  -0.598013  4.2716
+TL2Y W1  -0.707336  4.5895
+!Valine
+C3E2 W1 -0.58 4.5513
+!Glycine
+GNC   W1 -0.76 3.8165 
+GNT  W1 -0.83 4.49
+!Lysine
+NC2  W1  -1.20 4.282
+!Proline
+PNC W1 -0.62  4.282
+PS W1  -0.53  4.718
+!Methionine
+CS   W1  -0.75  4.5139
+!Cysteine
+SC W1 -0.75 4.4776
+!Arginine
+RS1 W1  -0.631586  4.5513
+RS2 W1  -0.722668  4.2606
+RS3 W1  -1.022128  4.3805
+
+CG1  W1 -0.625000 4.5513
+CG2  W1 -1.152673 4.532
+CG3  W1 -0.538611 4.804
+
+DBB     W1     -1.05670     4.17336 
+DSB     W1     -0.49981     3.75765
+DRO     W1     -0.67272     3.85338  
+DGC     W1     -0.75481     3.91305
+DBC     W1     -0.75481     3.91305
+LMB     W1     -0.54993     4.11293
+LRO     W1     -0.67272     3.85338
+LGC     W1     -0.75481     3.91305
+LBC     W1     -0.75481     3.91305
+
+END
+
+
+
+
